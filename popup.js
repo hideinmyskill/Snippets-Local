@@ -46,5 +46,41 @@ function loadSnippets() {
       document.getElementById("save").click();
     }});
 
+  // Download snippets as JSON
+document.getElementById("download").addEventListener("click", () => {
+  chrome.storage.local.get("snippets", (data) => {
+    const blob = new Blob([JSON.stringify(data.snippets, null, 2)], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "snippets.json";
+    a.click();
+    URL.revokeObjectURL(url);
+  });
+});
+
+// Upload and import snippets
+document.getElementById("upload").addEventListener("change", (event) => {
+  const file = event.target.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = (e) => {
+    try {
+      const importedSnippets = JSON.parse(e.target.result);
+      chrome.storage.local.get("snippets", (data) => {
+        const current = data.snippets || {};
+        const merged = { ...current, ...importedSnippets };
+        chrome.storage.local.set({ snippets: merged }, loadSnippets);
+      });
+    } catch (err) {
+      alert("Invalid JSON file.");
+    }
+  };
+  reader.readAsText(file);
+});
+
+
   loadSnippets();
   

@@ -8,13 +8,13 @@ body {
   
   h1 {
     color: #7df9ff;
-    font-size: 1.3em;
-    margin-bottom: 10px;
+    font-size: 1.8em;
+    margin-bottom: 15px;
     text-shadow: 0 0 5px #00f0ff;
   }
   
   input, textarea {
-    width: 100%;
+    width: 95%;
     background-color: #1e1e1e;
     color: #aeefff;
     border: 1px solid #00cfff;
@@ -91,3 +91,40 @@ body {
     font-size: 0.95em;
     white-space: pre-wrap;
   }
+
+  .file-controls {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+  
+  #download {
+    background-color: #00cfff;
+    color: #101820;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 0.95em;
+    margin-bottom: 10px;
+    width: 80%;
+    text-align: center;
+  }
+  
+  #download:hover {
+    background-color: #009ecc;
+  }
+  
+  #upload {
+    color: #d7f9ff;
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 0.9em;
+    width: 80%;
+    text-align: center;
+  }
+  
