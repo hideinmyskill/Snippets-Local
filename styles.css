@@ -1,0 +1,93 @@
+body {
+    background-color: #121212;
+    color: #d7f9ff;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 15px;
+    width: 330px;
+  }
+  
+  h1 {
+    color: #7df9ff;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #00f0ff;
+  }
+  
+  input, textarea {
+    width: 100%;
+    background-color: #1e1e1e;
+    color: #aeefff;
+    border: 1px solid #00cfff;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    font-size: 1em;
+  }
+  
+  button {
+    background-color: #00cfff;
+    color: #101820;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+    font-size: 0.95em;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #009ecc;
+  }
+  
+  .snippet-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+  }
+  
+  .snippet-item {
+    background: #1a1a1a;
+    border: 1px solid #2d2d2d;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e0ffff;
+    box-shadow: 0 0 8px rgba(0, 191, 255, 0.2);
+  }
+  
+  .snippet-text {
+    flex-grow: 1;
+    margin-right: 10px;
+    word-break: break-word;
+  }
+  
+  .delete-btn {
+    background: none;
+    border: none;
+    color: #ff6b6b;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .delete-btn:hover {
+    color: #ff2e2e;
+  }
+  
+  .snippet-text strong {
+    color: #7df9ff;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+  }
+  
+  .snippet-value {
+    color: #c0f0ff;
+    font-size: 0.95em;
+    white-space: pre-wrap;
+  }
