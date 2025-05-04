@@ -113,4 +113,4 @@ initListeners();
 const observer = new MutationObserver(() => initListeners());
 observer.observe(document.body, { childList: true, subtree: true });
 
-console.log("⚡ Real-time snippet expansion active in all inputs and editors");
+console.log("Real-time snippet expansion");
