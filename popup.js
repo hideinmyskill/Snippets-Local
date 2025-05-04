@@ -23,7 +23,7 @@ function loadSnippets() {
   
         li.appendChild(span);
         li.appendChild(delBtn);
-        list.appendChild(li);
+        list.prepend(li);
       }
     });
   }
