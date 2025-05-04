@@ -38,12 +38,25 @@ function loadSnippets() {
       snippets[key] = value;
       chrome.storage.local.set({ snippets }, loadSnippets);
     });
+
+    // ✅ Clear the input fields
+    document.getElementById("shortcut").value = "";
+    document.getElementById("content").value = "";
+
+    // Optional: Focus back to the shortcut field
+    document.getElementById("shortcut").focus();
   });
   
   document.getElementById("content").addEventListener("keydown", (e) => {
     if (e.key === "Enter" && !e.shiftKey) {
       e.preventDefault(); // Prevent newline
       document.getElementById("save").click();
+      // ✅ Clear the input fields
+      document.getElementById("shortcut").value = "";
+      document.getElementById("content").value = "";
+
+      // Optional: Focus back to the shortcut field
+      document.getElementById("shortcut").focus();
     }});
 
   // Download snippets as JSON
